@@ -27,7 +27,7 @@ public class FooServiceImpl implements FooService{
 
     public void printDigit( int n )
     {
-        System.out.print( n );
+        logger.info( String.valueOf(n) );
     }
 
     public void printOut( int n )  /* Print nonnegative n */
