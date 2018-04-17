@@ -2,6 +2,8 @@ package com.example.fooCodeClimate.service;
 
 public interface FooService {
 
+    public void blockerSonarBug();
+
     public void majorSonarBug();
 
     public int bad( int n );

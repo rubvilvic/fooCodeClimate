@@ -10,6 +10,14 @@ public class FooServiceImpl implements FooService{
     private final Logger logger = LoggerFactory.getLogger(FooService.class);
 
     @Override
+    public void blockerSonarBug() {
+        int j = 0;
+        while (true) { // Noncompliant; end condition omitted
+            j++;
+        }
+    }
+
+    @Override
     public void majorSonarBug() {
         boolean a = false;
         boolean b = true;
