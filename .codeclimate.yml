@@ -1,0 +1,32 @@
+version: "2"
+checks:
+  argument-count:
+    config:
+      threshold: 4
+  complex-logic:
+    config:
+      threshold: 4
+  file-lines:
+    enabled: false # file lines disabled
+  method-complexity:
+    config:
+      threshold: 5
+  method-count:
+    config:
+      threshold: 5 # method count to 5
+  method-lines:
+    config:
+      threshold: 25
+  nested-control-flow:
+    config:
+      threshold: 4
+  return-statements:
+    config:
+      threshold: 4
+plugins:
+  sonar-java:
+    enabled: true
+    config:
+      tests_patterns:
+        - src/test/**
+      minimum_severity: blocker # minimum severity to blocker
