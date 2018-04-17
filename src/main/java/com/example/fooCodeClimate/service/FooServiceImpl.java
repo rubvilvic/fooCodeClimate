@@ -9,7 +9,22 @@ public class FooServiceImpl implements FooService{
 
     private final Logger logger = LoggerFactory.getLogger(FooService.class);
 
-    public int bad( int n )
+    @Override
+    public void majorSonarBug() {
+        boolean a = false;
+        boolean b = true;
+        if (a) { // Noncompliant
+            logger.info("Noncompliant");
+        }
+
+        if (!a || b) { // Noncompliant; "!a" is always "true", "b" is never evaluated
+            logger.info("Noncompliant");
+        } else {
+            logger.info("never executed"); // never executed
+        }
+    }
+
+    public int bad(int n )
     {
         if( n == 0 )
             return 0;
