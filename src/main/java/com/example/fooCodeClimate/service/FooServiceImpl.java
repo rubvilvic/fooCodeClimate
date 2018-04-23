@@ -9,6 +9,8 @@ public class FooServiceImpl implements FooService{
 
     private final Logger logger = LoggerFactory.getLogger(FooService.class);
 
+    // FOO
+
     @Override
     public void blockerSonarBug() {
         int j = 0;
