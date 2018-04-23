@@ -13,6 +13,7 @@ public class FooServiceImpl implements FooService{
 
     @Override
     public void blockerSonarBug() {
+        // FOO
         int j = 0;
         while (true) { // Noncompliant; end condition omitted
             j++;
